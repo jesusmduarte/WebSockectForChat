@@ -1,7 +1,6 @@
 import WebSocket, {Server} from 'ws';
-import { DatabaseService } from '../services/databaseService';
+import dbService  from '../services/databaseService';
 
-const databaseService = new DatabaseService();
 
 const websocketController = (wss: Server) => {
     wss.on('connection', (ws: WebSocket) => {
